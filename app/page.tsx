@@ -28,6 +28,18 @@ function HomeContent() {
   
   const [searchQuery, setSearchQuery] = useState(searchParams.get("search") || "");
   const [selectedState, setSelectedState] = useState(searchParams.get("state") || "");
+  
+  // Rotating text for trailer types
+  const trailerTypes = ["REEFER", "DRY VAN", "FLATBEDS", "SIDE DUMPS", "BOTTOM DUMPS", "DROP DECKS", "LIVE FLOORS", "PNEUMATICS"];
+  const [currentTrailerType, setCurrentTrailerType] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTrailerType((prev) => (prev + 1) % trailerTypes.length);
+    }, 2000);
+    
+    return () => clearInterval(interval);
+  }, [trailerTypes.length]);
 
   const dealers = dealersData.dealers as Dealer[];
 
@@ -69,12 +81,17 @@ function HomeContent() {
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200/60 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent">
-            Semi Trailer Dealership Directory
+          <h1 className="text-4xl font-bold text-black flex items-center gap-3 flex-wrap">
+            Find top Semi Trailer Dealerships
+            <span className="text-black inline-block min-w-[200px]">
+              <span 
+                key={currentTrailerType}
+                className="inline-block animate-fade-in"
+              >
+                {trailerTypes[currentTrailerType]}
+              </span>
+            </span>
           </h1>
-          <p className="mt-3 text-slate-600 text-lg">
-            Find trusted semi-trailer dealerships across the United States
-          </p>
         </div>
       </header>
 
