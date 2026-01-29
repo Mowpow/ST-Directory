@@ -1,0 +1,274 @@
+{
+  "dealers": [
+    {
+      "id": "1",
+      "name": "American Trailer World",
+      "address": {
+        "street": "1234 Industrial Blvd",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75201"
+      },
+      "phone": "(214) 555-0100",
+      "email": "info@americantrailerworld.com",
+      "website": "https://www.americantrailerworld.com",
+      "coordinates": {
+        "lat": 32.7767,
+        "lng": -96.7970
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Financing"]
+    },
+    {
+      "id": "2",
+      "name": "Pacific Coast Trailers",
+      "address": {
+        "street": "5678 Harbor Way",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001"
+      },
+      "phone": "(213) 555-0200",
+      "email": "sales@pacificcoasttrailers.com",
+      "website": "https://www.pacificcoasttrailers.com",
+      "coordinates": {
+        "lat": 34.0522,
+        "lng": -118.2437
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service"]
+    },
+    {
+      "id": "3",
+      "name": "Midwest Trailer Solutions",
+      "address": {
+        "street": "9012 Commerce Drive",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60601"
+      },
+      "phone": "(312) 555-0300",
+      "email": "contact@midwesttrailers.com",
+      "website": "https://www.midwesttrailers.com",
+      "coordinates": {
+        "lat": 41.8781,
+        "lng": -87.6298
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Rental", "Financing"]
+    },
+    {
+      "id": "4",
+      "name": "East Coast Trailer Depot",
+      "address": {
+        "street": "3456 Atlantic Avenue",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "phone": "(212) 555-0400",
+      "email": "info@eastcoasttrailers.com",
+      "website": "https://www.eastcoasttrailers.com",
+      "coordinates": {
+        "lat": 40.7128,
+        "lng": -74.0060
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts"]
+    },
+    {
+      "id": "5",
+      "name": "Southern Trailer Sales",
+      "address": {
+        "street": "7890 Highway 75",
+        "city": "Atlanta",
+        "state": "GA",
+        "zip": "30301"
+      },
+      "phone": "(404) 555-0500",
+      "email": "sales@southerntrailers.com",
+      "website": "https://www.southerntrailers.com",
+      "coordinates": {
+        "lat": 33.7490,
+        "lng": -84.3880
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Financing"]
+    },
+    {
+      "id": "6",
+      "name": "Rocky Mountain Trailers",
+      "address": {
+        "street": "2345 Mountain View Road",
+        "city": "Denver",
+        "state": "CO",
+        "zip": "80201"
+      },
+      "phone": "(303) 555-0600",
+      "email": "info@rockymountaintrailers.com",
+      "website": "https://www.rockymountaintrailers.com",
+      "coordinates": {
+        "lat": 39.7392,
+        "lng": -104.9903
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service"]
+    },
+    {
+      "id": "7",
+      "name": "Great Lakes Trailer Center",
+      "address": {
+        "street": "4567 Lakeshore Drive",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "48201"
+      },
+      "phone": "(313) 555-0700",
+      "email": "contact@greatlakestrailers.com",
+      "website": "https://www.greatlakestrailers.com",
+      "coordinates": {
+        "lat": 42.3314,
+        "lng": -83.0458
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Rental"]
+    },
+    {
+      "id": "8",
+      "name": "Desert Trailers Unlimited",
+      "address": {
+        "street": "6789 Desert Highway",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "85001"
+      },
+      "phone": "(602) 555-0800",
+      "email": "sales@deserttrailers.com",
+      "website": "https://www.deserttrailers.com",
+      "coordinates": {
+        "lat": 33.4484,
+        "lng": -112.0740
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Financing"]
+    },
+    {
+      "id": "9",
+      "name": "Northwest Trailer Works",
+      "address": {
+        "street": "8901 Pacific Avenue",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98101"
+      },
+      "phone": "(206) 555-0900",
+      "email": "info@northwesttrailers.com",
+      "website": "https://www.northwesttrailers.com",
+      "coordinates": {
+        "lat": 47.6062,
+        "lng": -122.3321
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Rental"]
+    },
+    {
+      "id": "10",
+      "name": "Gulf Coast Trailer Sales",
+      "address": {
+        "street": "1234 Bayfront Boulevard",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77001"
+      },
+      "phone": "(713) 555-1000",
+      "email": "contact@gulfcoasttrailers.com",
+      "website": "https://www.gulfcoasttrailers.com",
+      "coordinates": {
+        "lat": 29.7604,
+        "lng": -95.3698
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Financing", "Rental"]
+    },
+    {
+      "id": "11",
+      "name": "Central Trailer Supply",
+      "address": {
+        "street": "5678 Main Street",
+        "city": "Kansas City",
+        "state": "MO",
+        "zip": "64101"
+      },
+      "phone": "(816) 555-1100",
+      "email": "info@centraltrailers.com",
+      "website": "https://www.centraltrailers.com",
+      "coordinates": {
+        "lat": 39.0997,
+        "lng": -94.5786
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts"]
+    },
+    {
+      "id": "12",
+      "name": "Northeast Trailer Depot",
+      "address": {
+        "street": "9012 Harbor Drive",
+        "city": "Boston",
+        "state": "MA",
+        "zip": "02101"
+      },
+      "phone": "(617) 555-1200",
+      "email": "sales@northeasttrailers.com",
+      "website": "https://www.northeasttrailers.com",
+      "coordinates": {
+        "lat": 42.3601,
+        "lng": -71.0589
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service"]
+    },
+    {
+      "id": "13",
+      "name": "Sunshine State Trailers",
+      "address": {
+        "street": "3456 Beach Boulevard",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33101"
+      },
+      "phone": "(305) 555-1300",
+      "email": "info@sunshinestatetrailers.com",
+      "website": "https://www.sunshinestatetrailers.com",
+      "coordinates": {
+        "lat": 25.7617,
+        "lng": -80.1918
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Rental", "Financing"]
+    },
+    {
+      "id": "14",
+      "name": "Mountain West Trailer Sales",
+      "address": {
+        "street": "7890 Canyon Road",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "zip": "84101"
+      },
+      "phone": "(801) 555-1400",
+      "email": "contact@mountainwesttrailers.com",
+      "website": "https://www.mountainwesttrailers.com",
+      "coordinates": {
+        "lat": 40.7608,
+        "lng": -111.8910
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service"]
+    },
+    {
+      "id": "15",
+      "name": "Plains Trailer Center",
+      "address": {
+        "street": "2345 Prairie Avenue",
+        "city": "Omaha",
+        "state": "NE",
+        "zip": "68101"
+      },
+      "phone": "(402) 555-1500",
+      "email": "sales@plainstrailers.com",
+      "website": "https://www.plainstrailers.com",
+      "coordinates": {
+        "lat": 41.2565,
+        "lng": -95.9345
+      },
+      "services": ["New Trailers", "Used Trailers", "Parts", "Service", "Financing"]
+    }
+  ]
+}
