@@ -80,13 +80,13 @@ function HomeContent() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50/30">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200/60 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-4xl font-bold text-black flex items-center gap-3 flex-wrap">
-            Find top Semi Trailer Dealerships
-            <span className="text-black inline-block min-w-[200px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-black text-center flex items-center justify-center gap-4 flex-wrap">
+            <span>Find top Semi Trailer Dealerships</span>
+            <span className="inline-block min-w-[300px] h-[1.2em] overflow-hidden relative text-center">
               <span 
                 key={currentTrailerType}
-                className="inline-block animate-fade-in"
+                className="inline-block animate-scroll-up font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"
               >
                 {trailerTypes[currentTrailerType]}
               </span>

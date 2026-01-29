@@ -35,18 +35,26 @@ body {
     text-wrap: balance;
   }
   
-  @keyframes fade-in {
-    from {
+  @keyframes scroll-up {
+    0% {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(120%);
     }
-    to {
+    15% {
       opacity: 1;
       transform: translateY(0);
     }
+    85% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-120%);
+    }
   }
   
-  .animate-fade-in {
-    animation: fade-in 0.5s ease-in-out;
+  .animate-scroll-up {
+    animation: scroll-up 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 }
