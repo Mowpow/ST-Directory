@@ -62,14 +62,14 @@ interface FilterPanelProps {
 export default function FilterPanel({ selectedState, onStateChange }: FilterPanelProps) {
   return (
     <div className="w-full">
-      <label htmlFor="state-filter" className="block text-sm font-semibold text-gray-700 mb-3">
+      <label htmlFor="state-filter" className="block text-sm font-semibold text-blue-900 mb-3">
         Filter by State
       </label>
       <select
         id="state-filter"
         value={selectedState}
         onChange={(e) => onStateChange(e.target.value)}
-        className="w-full px-4 py-3 text-gray-900 bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-400/30 focus:border-gray-300 transition-all shadow-sm hover:shadow-sm cursor-pointer"
+        className="w-full px-4 py-3 text-blue-900 bg-white border border-blue-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400 transition-all shadow-md hover:shadow-lg cursor-pointer"
       >
         {US_STATES.map((state) => (
           <option key={state.value} value={state.value}>

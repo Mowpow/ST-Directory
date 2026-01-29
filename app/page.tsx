@@ -77,13 +77,13 @@ function HomeContent() {
   }, [searchQuery, selectedState, router]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
       {/* Header */}
-      <header className="bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-100 sticky top-0 z-10">
+      <header className="bg-white/80 backdrop-blur-xl shadow-lg border-b border-blue-100/50 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 Find top Semi Trailers
               </h1>
             </div>
@@ -91,7 +91,7 @@ function HomeContent() {
               <div className="inline-block min-w-[320px] h-[120px] md:h-[140px] lg:h-[160px] overflow-hidden relative flex items-center">
                 <span 
                   key={currentTrailerType}
-                  className="inline-block animate-scroll-up font-bold text-5xl md:text-6xl lg:text-7xl text-gray-900"
+                  className="inline-block animate-scroll-up font-bold text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent"
                 >
                   {trailerTypes[currentTrailerType]}
                 </span>
@@ -104,10 +104,10 @@ function HomeContent() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Search and Filter Section */}
-        <div className="bg-gray-50/50 backdrop-blur-sm rounded-3xl shadow-sm p-8 mb-10 border border-gray-100">
+        <div className="bg-white/70 backdrop-blur-md rounded-3xl shadow-lg p-8 mb-10 border border-blue-100/50">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-3">
+              <label className="block text-sm font-semibold text-blue-900 mb-3">
                 Search Dealerships
               </label>
               <SearchBar
@@ -126,7 +126,7 @@ function HomeContent() {
 
         {/* Results Section */}
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-2xl font-semibold text-gray-900">
+          <h2 className="text-2xl font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
             {filteredDealers.length} {filteredDealers.length === 1 ? "Dealership" : "Dealerships"} Found
           </h2>
         </div>
@@ -136,9 +136,9 @@ function HomeContent() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-50/50 backdrop-blur-sm border-t border-gray-100 mt-20">
+      <footer className="bg-white/60 backdrop-blur-md border-t border-blue-100/50 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <p className="text-center text-gray-500 text-sm">
+          <p className="text-center text-blue-600/70 text-sm">
             © {new Date().getFullYear()} Semi Trailer Dealership Directory. All rights reserved.
           </p>
         </div>
@@ -150,8 +150,8 @@ function HomeContent() {
 export default function Home() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-gray-500 font-medium">Loading...</div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 flex items-center justify-center">
+        <div className="text-blue-600 font-medium">Loading...</div>
       </div>
     }>
       <HomeContent />

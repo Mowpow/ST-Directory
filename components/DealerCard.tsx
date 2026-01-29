@@ -22,20 +22,20 @@ interface DealerCardProps {
 
 export default function DealerCard({ dealer }: DealerCardProps) {
   return (
-    <div className="bg-white backdrop-blur-sm rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 p-6 border border-gray-100 hover:border-gray-200 group">
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+    <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-blue-100/50 hover:border-cyan-200 group">
+      <h3 className="text-xl font-semibold text-blue-900 mb-3">
         <Link
           href={`/dealers/${dealer.id}`}
-          className="hover:text-gray-700 transition-colors group-hover:text-gray-700"
+          className="hover:text-cyan-600 transition-colors group-hover:text-cyan-600"
         >
           {dealer.name}
         </Link>
       </h3>
       
-      <div className="space-y-2.5 text-gray-600 mb-5">
+      <div className="space-y-2.5 text-blue-700 mb-5">
         <p className="flex items-start">
           <svg
-            className="w-5 h-5 mr-2.5 mt-0.5 text-gray-400 flex-shrink-0"
+            className="w-5 h-5 mr-2.5 mt-0.5 text-cyan-500 flex-shrink-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -70,7 +70,7 @@ export default function DealerCard({ dealer }: DealerCardProps) {
               d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
             />
           </svg>
-          <a href={`tel:${dealer.phone}`} className="hover:text-gray-900 transition-colors font-medium">
+          <a href={`tel:${dealer.phone}`} className="hover:text-cyan-600 transition-colors font-medium">
             {dealer.phone}
           </a>
         </p>
@@ -82,13 +82,13 @@ export default function DealerCard({ dealer }: DealerCardProps) {
             {dealer.services.slice(0, 3).map((service, index) => (
               <span
                 key={index}
-                className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full"
+                className="px-3 py-1 text-xs font-medium bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 rounded-full"
               >
                 {service}
               </span>
             ))}
             {dealer.services.length > 3 && (
-              <span className="px-3 py-1 text-xs font-medium text-gray-500">
+              <span className="px-3 py-1 text-xs font-medium text-blue-600">
                 +{dealer.services.length - 3} more
               </span>
             )}
@@ -98,7 +98,7 @@ export default function DealerCard({ dealer }: DealerCardProps) {
 
       <Link
         href={`/dealers/${dealer.id}`}
-        className="inline-flex items-center mt-4 text-gray-700 hover:text-gray-900 font-medium text-sm group-hover:gap-2 gap-1 transition-all"
+        className="inline-flex items-center mt-4 text-cyan-600 hover:text-blue-600 font-semibold text-sm group-hover:gap-2 gap-1 transition-all"
       >
         View Details
         <span className="transition-transform group-hover:translate-x-1">→</span>
