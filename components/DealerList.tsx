@@ -22,9 +22,9 @@ interface DealerListProps {
 export default function DealerList({ dealers }: DealerListProps) {
   if (dealers.length === 0) {
     return (
-      <div className="text-center py-12">
-        <p className="text-gray-500 text-lg">No dealerships found matching your criteria.</p>
-        <p className="text-gray-400 text-sm mt-2">Try adjusting your search or filters.</p>
+      <div className="text-center py-16">
+        <p className="text-slate-600 text-lg font-medium">No dealerships found matching your criteria.</p>
+        <p className="text-slate-400 text-sm mt-2">Try adjusting your search or filters.</p>
       </div>
     );
   }

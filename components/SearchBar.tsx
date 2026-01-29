@@ -26,10 +26,10 @@ export default function SearchBar({ onSearch, initialValue = "" }: SearchBarProp
           placeholder="Search by dealership name, city, or state..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full px-4 py-3 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-3 pl-11 pr-4 text-slate-700 bg-white/90 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-400 transition-all shadow-sm hover:shadow-md"
         />
         <svg
-          className="absolute left-3 top-3.5 h-5 w-5 text-gray-400"
+          className="absolute left-3.5 top-3.5 h-5 w-5 text-slate-400"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
