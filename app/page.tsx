@@ -39,7 +39,7 @@ function HomeContent() {
     }, 2000);
     
     return () => clearInterval(interval);
-  }, [trailerTypes.length]);
+  }, []);
 
   const dealers = dealersData.dealers as Dealer[];
 
