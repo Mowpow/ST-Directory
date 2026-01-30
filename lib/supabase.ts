@@ -1,4 +1,105 @@
-"use client";
+﻿# Create lib/supabase.ts
+@'
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.warn('Supabase environment variables are not set');
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+'@ | Out-File -FilePath "lib\supabase.ts" -Encoding utf8
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.warn('Supabase environment variables are not set');
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+import { supabase } from './supabase';
+
+export interface Dealer {
+  id: string;
+  name: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+  };
+  phone: string;
+  email?: string;
+  website?: string;
+  services?: string[];
+}
+
+interface SupabaseDealer {
+  id: string;
+  name: string;
+  street_address: string | null;
+  city: string | null;
+  state: string | null;
+  zip_code: string | null;
+  phone: string | null;
+  email: string | null;
+  website: string | null;
+  sales: string | null;
+  parts: string | null;
+  service: string | null;
+  rental: string | null;
+}
+
+function transformDealer(dbDealer: SupabaseDealer): Dealer {
+  const services: string[] = [];
+  
+  if (dbDealer.sales === 'Yes') services.push('Sales');
+  if (dbDealer.parts === 'Yes') services.push('Parts');
+  if (dbDealer.service === 'Yes') services.push('Service');
+  if (dbDealer.rental === 'Yes') services.push('Rental');
+
+  return {
+    id: dbDealer.id,
+    name: dbDealer.name,
+    address: {
+      street: dbDealer.street_address || '',
+      city: dbDealer.city || '',
+      state: (dbDealer.state || '').toUpperCase(),
+      zip: dbDealer.zip_code || '',
+    },
+    phone: dbDealer.phone || '',
+    email: dbDealer.email || undefined,
+    website: dbDealer.website || undefined,
+    services: services.length > 0 ? services : undefined,
+  };
+}
+
+export async function getDealers(): Promise<Dealer[]> {
+  try {
+    const { data, error } = await supabase
+      .from('dealers')
+      .select('*')
+      .order('name');
+
+    if (error) {
+      console.error('Error fetching dealers:', error);
+      return [];
+    }
+
+    if (!data) {
+      return [];
+    }
+
+    return data.map(transformDealer);
+  } catch (error) {
+    console.error('Error fetching dealers:', error);
+    return [];
+  }
+}"use client";
 
 import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -55,7 +156,7 @@ function HomeContent() {
   // Calculate statistics
   const stats = useMemo(() => {
     const uniqueStates = new Set(dealers.map((d) => d.address.state));
-    const uniqueCities = new Set(dealers.map((d) => `${d.address.city}, ${d.address.state}`));
+    const uniqueCities = new Set(dealers.map((d) => ${d.address.city}, ));
     return {
       dealerCount: dealers.length,
       stateCount: uniqueStates.size,
@@ -157,7 +258,7 @@ function HomeContent() {
     if (searchQuery) params.set("search", searchQuery);
     if (selectedState) params.set("state", selectedState);
     
-    const newUrl = params.toString() ? `?${params.toString()}` : "/";
+    const newUrl = params.toString() ? ? : "/";
     router.replace(newUrl, { scroll: false });
   }, [searchQuery, selectedState, router]);
 
@@ -212,7 +313,7 @@ function HomeContent() {
               <div className="inline-block w-[180px] sm:w-[220px] md:w-[300px] lg:w-[380px] h-[50px] sm:h-[65px] md:h-[80px] lg:h-[95px] overflow-hidden relative flex items-center justify-center">
                 <span 
                   key={currentTrailerType}
-                  className={`inline-block animate-scroll-up font-bold ${getFontSize(trailerTypes[currentTrailerType])} text-blue-600 text-center whitespace-nowrap`}
+                  className={inline-block animate-scroll-up font-bold  text-blue-600 text-center whitespace-nowrap}
                 >
                   {trailerTypes[currentTrailerType]}
                 </span>
@@ -303,7 +404,7 @@ function HomeContent() {
               <ul className="space-y-2 text-sm">
                 {topStates.slice(0, 4).map((state) => (
                   <li key={state.state}>
-                    <Link href={`/?state=${state.state}`} className="text-gray-600 hover:text-gray-900">
+                    <Link href={/?state=} className="text-gray-600 hover:text-gray-900">
                       {state.stateName}
                     </Link>
                   </li>
@@ -341,4 +442,24 @@ export default function Home() {
       <HomeContent />
     </Suspense>
   );
+}cd "c:\Users\danm\Desktop\ST Directory"
+git add .
+git commit -m "Add Supabase integration for dealers data"
+git push origin main
+cd "c:\Users\danm\Desktop\ST Directory"
+# Save this as setup-supabase.ps1 in your project root, then run: .\setup-supabase.ps1
+
+cd "c:\Users\danm\Desktop\ST Directory"
+
+# Create lib/supabase.ts
+@"
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.warn('Supabase environment variables are not set');
 }
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
