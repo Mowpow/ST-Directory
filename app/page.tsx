@@ -33,6 +33,14 @@ function HomeContent() {
   const trailerTypes = ["REEFER", "DRY VAN", "FLATBEDS", "SIDE DUMPS", "BOTTOM DUMPS", "DROP DECKS", "LIVE FLOORS", "PNEUMATICS"];
   const [currentTrailerType, setCurrentTrailerType] = useState(0);
   
+  // Calculate font size based on word length
+  const getFontSize = (text: string) => {
+    const length = text.length;
+    if (length <= 8) return "text-5xl md:text-6xl lg:text-7xl";
+    if (length <= 12) return "text-4xl md:text-5xl lg:text-6xl";
+    return "text-3xl md:text-4xl lg:text-5xl";
+  };
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTrailerType((prev) => (prev + 1) % trailerTypes.length);
@@ -85,10 +93,10 @@ function HomeContent() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black uppercase flex-shrink-0">
               FIND TOP
             </h1>
-            <div className="inline-block min-w-[280px] md:min-w-[320px] h-[120px] md:h-[140px] lg:h-[160px] overflow-hidden relative flex items-center flex-shrink-0">
+            <div className="inline-block w-[400px] md:w-[450px] lg:w-[500px] h-[120px] md:h-[140px] lg:h-[160px] overflow-hidden relative flex items-center justify-center flex-shrink-0">
               <span 
                 key={currentTrailerType}
-                className="inline-block animate-scroll-up font-bold text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent"
+                className={`inline-block animate-scroll-up font-bold ${getFontSize(trailerTypes[currentTrailerType])} bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent text-center`}
               >
                 {trailerTypes[currentTrailerType]}
               </span>
