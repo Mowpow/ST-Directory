@@ -81,11 +81,11 @@ function HomeContent() {
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-xl shadow-lg border-b border-blue-100/50 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 lg:gap-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black uppercase">
+          <div className="flex flex-nowrap items-center justify-center lg:justify-start gap-4 lg:gap-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black uppercase flex-shrink-0">
               FIND TOP
             </h1>
-            <div className="inline-block min-w-[280px] md:min-w-[320px] h-[120px] md:h-[140px] lg:h-[160px] overflow-hidden relative flex items-center">
+            <div className="inline-block min-w-[280px] md:min-w-[320px] h-[120px] md:h-[140px] lg:h-[160px] overflow-hidden relative flex items-center flex-shrink-0">
               <span 
                 key={currentTrailerType}
                 className="inline-block animate-scroll-up font-bold text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent"
@@ -93,7 +93,7 @@ function HomeContent() {
                 {trailerTypes[currentTrailerType]}
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black uppercase">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black uppercase flex-shrink-0">
               SEMI TRAILERS
             </h1>
           </div>
