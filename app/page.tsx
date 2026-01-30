@@ -36,9 +36,9 @@ function HomeContent() {
   // Calculate font size based on word length
   const getFontSize = (text: string) => {
     const length = text.length;
-    if (length <= 8) return "text-5xl md:text-6xl lg:text-7xl";
-    if (length <= 12) return "text-4xl md:text-5xl lg:text-6xl";
-    return "text-3xl md:text-4xl lg:text-5xl";
+    if (length <= 8) return "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl";
+    if (length <= 12) return "text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl";
+    return "text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl";
   };
   
   useEffect(() => {
@@ -88,12 +88,12 @@ function HomeContent() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-xl shadow-lg border-b border-blue-100/50 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-nowrap items-center justify-center lg:justify-start gap-4 lg:gap-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black uppercase flex-shrink-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-12 lg:py-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 lg:gap-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black uppercase text-center sm:text-left">
               FIND TOP
             </h1>
-            <div className="inline-block w-[400px] md:w-[450px] lg:w-[500px] h-[120px] md:h-[140px] lg:h-[160px] overflow-hidden relative flex items-center justify-center flex-shrink-0">
+            <div className="inline-block w-full sm:w-[280px] md:w-[350px] lg:w-[450px] xl:w-[500px] h-[80px] sm:h-[100px] md:h-[120px] lg:h-[140px] xl:h-[160px] overflow-hidden relative flex items-center justify-center">
               <span 
                 key={currentTrailerType}
                 className={`inline-block animate-scroll-up font-bold ${getFontSize(trailerTypes[currentTrailerType])} bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent text-center`}
@@ -101,7 +101,7 @@ function HomeContent() {
                 {trailerTypes[currentTrailerType]}
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black uppercase flex-shrink-0">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black uppercase text-center sm:text-left">
               SEMI TRAILERS
             </h1>
           </div>
@@ -109,10 +109,10 @@ function HomeContent() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10">
         {/* Search and Filter Section */}
-        <div className="bg-white/70 backdrop-blur-md rounded-3xl shadow-lg p-8 mb-10 border border-blue-100/50">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-white/70 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 md:mb-10 border border-blue-100/50">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label className="block text-sm font-semibold text-blue-900 mb-3">
                 Search Dealerships
@@ -132,8 +132,8 @@ function HomeContent() {
         </div>
 
         {/* Results Section */}
-        <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-2xl font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+        <div className="mb-4 sm:mb-6 flex items-center justify-between">
+          <h2 className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
             {filteredDealers.length} {filteredDealers.length === 1 ? "Dealership" : "Dealerships"} Found
           </h2>
         </div>
@@ -143,9 +143,9 @@ function HomeContent() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white/60 backdrop-blur-md border-t border-blue-100/50 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <p className="text-center text-blue-600/70 text-sm">
+      <footer className="bg-white/60 backdrop-blur-md border-t border-blue-100/50 mt-12 sm:mt-16 md:mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+          <p className="text-center text-blue-600/70 text-xs sm:text-sm">
             © {new Date().getFullYear()} Semi Trailer Dealership Directory. All rights reserved.
           </p>
         </div>

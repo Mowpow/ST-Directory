@@ -35,6 +35,11 @@ body {
     text-wrap: balance;
   }
   
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
   @keyframes scroll-up {
     0% {
       opacity: 0;
