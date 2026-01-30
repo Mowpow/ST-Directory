@@ -89,19 +89,19 @@ function HomeContent() {
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-xl shadow-lg border-b border-blue-100/50 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-12 lg:py-16">
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 lg:gap-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black uppercase text-center sm:text-left">
+          <div className="flex flex-nowrap items-center justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 lg:gap-6 overflow-x-auto">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-black uppercase flex-shrink-0 whitespace-nowrap">
               FIND TOP
             </h1>
-            <div className="inline-block w-full sm:w-[280px] md:w-[350px] lg:w-[450px] xl:w-[500px] h-[80px] sm:h-[100px] md:h-[120px] lg:h-[140px] xl:h-[160px] overflow-hidden relative flex items-center justify-center">
+            <div className="inline-block w-[200px] sm:w-[250px] md:w-[350px] lg:w-[450px] xl:w-[500px] h-[80px] sm:h-[100px] md:h-[120px] lg:h-[140px] xl:h-[160px] overflow-hidden relative flex items-center justify-center flex-shrink-0">
               <span 
                 key={currentTrailerType}
-                className={`inline-block animate-scroll-up font-bold ${getFontSize(trailerTypes[currentTrailerType])} bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent text-center`}
+                className={`inline-block animate-scroll-up font-bold ${getFontSize(trailerTypes[currentTrailerType])} bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent text-center whitespace-nowrap`}
               >
                 {trailerTypes[currentTrailerType]}
               </span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black uppercase text-center sm:text-left">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-black uppercase flex-shrink-0 whitespace-nowrap">
               SEMI TRAILERS
             </h1>
           </div>
