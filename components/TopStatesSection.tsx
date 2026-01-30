@@ -7,7 +7,6 @@ interface StateStat {
   stateName: string;
   dealerCount: number;
   cityCount: number;
-  emoji?: string;
 }
 
 interface TopStatesSectionProps {
@@ -33,7 +32,6 @@ export default function TopStatesSection({ topStates }: TopStatesSectionProps) {
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
-                  {state.emoji && <span className="text-2xl">{state.emoji}</span>}
                   <span className="text-xl font-semibold text-gray-900">{state.stateName}</span>
                 </div>
               </div>

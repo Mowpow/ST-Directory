@@ -12,8 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Find Semi Trailer Dealerships | 10,000+ Trailer Dealers Nationwide",
-  description: "Find semi-trailer dealerships across America, from local outlets to major retailers. Discover discounted trailers with quality assurance in all 50 states.",
-  keywords: "semi trailer, trailer dealership, trailer sales, commercial trailers, trailer directory, discount trailers, trailer dealers",
+  description: "Find semi-trailer dealerships across America, from local outlets to major retailers. Connect with trusted dealers offering quality trailers in all 50 states.",
+  keywords: "semi trailer, trailer dealership, trailer sales, commercial trailers, trailer directory, trailer dealers, trusted dealers",
 };
 
 export const viewport: Viewport = {

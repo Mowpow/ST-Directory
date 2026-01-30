@@ -38,12 +38,12 @@ function HomeContent() {
   const trailerTypes = ["REEFER", "DRY VAN", "FLATBEDS", "SIDE DUMPS", "BOTTOM DUMPS", "DROP DECKS", "LIVE FLOORS", "PNEUMATICS"];
   const [currentTrailerType, setCurrentTrailerType] = useState(0);
   
-  // Calculate font size based on word length
+  // Calculate font size based on word length - smaller sizes to ensure text fits
   const getFontSize = (text: string) => {
     const length = text.length;
-    if (length <= 8) return "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl";
-    if (length <= 12) return "text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl";
-    return "text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl";
+    if (length <= 8) return "text-2xl sm:text-3xl md:text-4xl lg:text-5xl";
+    if (length <= 12) return "text-xl sm:text-2xl md:text-3xl lg:text-4xl";
+    return "text-lg sm:text-xl md:text-2xl lg:text-3xl";
   };
   
   useEffect(() => {
@@ -81,17 +81,12 @@ function HomeContent() {
       stateData.cities.add(dealer.address.city);
     });
 
-    const stateEmojis: Record<string, string> = {
-      FL: "🌴", TX: "⭐", CA: "🌴", PA: "📍", NY: "🗽", GA: "🍑", IL: "🌆", OH: "📍",
-    };
-
     return Array.from(stateMap.entries())
       .map(([state, data]) => ({
         state,
         stateName: getStateName(state),
         dealerCount: data.count,
         cityCount: data.cities.size,
-        emoji: stateEmojis[state],
       }))
       .sort((a, b) => b.dealerCount - a.dealerCount)
       .slice(0, 8);
@@ -110,14 +105,14 @@ function HomeContent() {
     });
 
     return [
-      { icon: "🧊", name: "Reefer", count: dealers.length, slug: "reefer" },
-      { icon: "📦", name: "Dry Van", count: dealers.length, slug: "dry-van" },
-      { icon: "🚛", name: "Flatbed", count: dealers.length, slug: "flatbed" },
-      { icon: "🚚", name: "Side Dump", count: Math.floor(dealers.length * 0.7), slug: "side-dump" },
-      { icon: "⬇️", name: "Bottom Dump", count: Math.floor(dealers.length * 0.6), slug: "bottom-dump" },
-      { icon: "📉", name: "Drop Deck", count: Math.floor(dealers.length * 0.8), slug: "drop-deck" },
-      { icon: "🔄", name: "Live Floor", count: Math.floor(dealers.length * 0.5), slug: "live-floor" },
-      { icon: "💨", name: "Pneumatic", count: Math.floor(dealers.length * 0.4), slug: "pneumatic" },
+      { name: "Reefer", count: dealers.length, slug: "reefer" },
+      { name: "Dry Van", count: dealers.length, slug: "dry-van" },
+      { name: "Flatbed", count: dealers.length, slug: "flatbed" },
+      { name: "Side Dump", count: Math.floor(dealers.length * 0.7), slug: "side-dump" },
+      { name: "Bottom Dump", count: Math.floor(dealers.length * 0.6), slug: "bottom-dump" },
+      { name: "Drop Deck", count: Math.floor(dealers.length * 0.8), slug: "drop-deck" },
+      { name: "Live Floor", count: Math.floor(dealers.length * 0.5), slug: "live-floor" },
+      { name: "Pneumatic", count: Math.floor(dealers.length * 0.4), slug: "pneumatic" },
     ];
   }, [dealers]);
 
@@ -204,13 +199,13 @@ function HomeContent() {
               Find Semi Trailer Dealerships
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              Save 20-50% on Quality Trailers
+              Find Trusted Trailer Dealerships
             </p>
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-8">
               <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black uppercase">
                 FIND TOP
               </span>
-              <div className="inline-block w-[200px] sm:w-[250px] md:w-[350px] lg:w-[450px] h-[60px] sm:h-[80px] md:h-[100px] lg:h-[120px] overflow-hidden relative flex items-center justify-center">
+              <div className="inline-block w-[180px] sm:w-[220px] md:w-[300px] lg:w-[380px] h-[50px] sm:h-[65px] md:h-[80px] lg:h-[95px] overflow-hidden relative flex items-center justify-center">
                 <span 
                   key={currentTrailerType}
                   className={`inline-block animate-scroll-up font-bold ${getFontSize(trailerTypes[currentTrailerType])} text-blue-600 text-center whitespace-nowrap`}
@@ -223,7 +218,7 @@ function HomeContent() {
               </span>
             </div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Find semi-trailer dealerships across America, from local outlets to major retailers. Discover discounted trailers with quality assurance in all 50 states.
+              Find semi-trailer dealerships across America, from local outlets to major retailers. Connect with trusted dealers offering quality trailers in all 50 states.
             </p>
           </div>
         </div>
@@ -287,7 +282,7 @@ function HomeContent() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Semi Trailer Locator</h3>
               <p className="text-gray-600 text-sm">
-                Your trusted source for finding semi-trailer dealerships. Save 20-50% on quality trailers across all 50 US states.
+                Your trusted source for finding semi-trailer dealerships. Connect with quality dealers across all 50 US states.
               </p>
             </div>
             <div>
@@ -323,7 +318,7 @@ function HomeContent() {
           <div className="border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© {new Date().getFullYear()} Semi Trailer Dealership Directory. All rights reserved.</p>
             <p className="mt-2">
-              {stats.dealerCount.toLocaleString()}+ Store Listings • {stats.stateCount} US States • Save 20-50%
+              {stats.dealerCount.toLocaleString()}+ Store Listings • {stats.stateCount} US States • Trusted Dealers
             </p>
           </div>
         </div>

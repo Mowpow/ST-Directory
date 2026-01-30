@@ -85,14 +85,14 @@ ORDER BY dealer_count DESC;
 
 -- Sample data insertion queries
 INSERT INTO trailer_categories (name, slug, icon, description) VALUES
-('Reefer Trailers', 'reefer', '🧊', 'Refrigerated trailers for temperature-controlled transport'),
-('Dry Van Trailers', 'dry-van', '📦', 'Standard enclosed trailers for general freight'),
-('Flatbed Trailers', 'flatbed', '🚛', 'Open flatbed trailers for oversized loads'),
-('Side Dump Trailers', 'side-dump', '🚚', 'Trailers with side dumping capability'),
-('Bottom Dump Trailers', 'bottom-dump', '⬇️', 'Trailers with bottom discharge'),
-('Drop Deck Trailers', 'drop-deck', '📉', 'Low-profile trailers for tall loads'),
-('Live Floor Trailers', 'live-floor', '🔄', 'Trailers with moving floor systems'),
-('Pneumatic Trailers', 'pneumatic', '💨', 'Trailers for bulk powder and grain transport');
+('Reefer Trailers', 'reefer', NULL, 'Refrigerated trailers for temperature-controlled transport'),
+('Dry Van Trailers', 'dry-van', NULL, 'Standard enclosed trailers for general freight'),
+('Flatbed Trailers', 'flatbed', NULL, 'Open flatbed trailers for oversized loads'),
+('Side Dump Trailers', 'side-dump', NULL, 'Trailers with side dumping capability'),
+('Bottom Dump Trailers', 'bottom-dump', NULL, 'Trailers with bottom discharge'),
+('Drop Deck Trailers', 'drop-deck', NULL, 'Low-profile trailers for tall loads'),
+('Live Floor Trailers', 'live-floor', NULL, 'Trailers with moving floor systems'),
+('Pneumatic Trailers', 'pneumatic', NULL, 'Trailers for bulk powder and grain transport');
 
 INSERT INTO services (name) VALUES
 ('New Trailers'),

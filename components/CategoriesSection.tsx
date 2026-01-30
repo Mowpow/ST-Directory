@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 interface Category {
-  icon: string;
   name: string;
   count: number;
   slug: string;
@@ -27,7 +26,6 @@ export default function CategoriesSection({ categories }: CategoriesSectionProps
               href={`/?category=${category.slug}`}
               className="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors border border-gray-200 hover:border-blue-300"
             >
-              <div className="text-4xl mb-3">{category.icon}</div>
               <div className="font-semibold text-gray-900 mb-1">{category.name}</div>
               <div className="text-sm text-gray-600">{category.count} dealers</div>
             </Link>
